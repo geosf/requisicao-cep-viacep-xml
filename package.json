@@ -1,0 +1,30 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "http-server": "^0.12.3",
+    "readline-sync": "^1.4.10",
+    "request": "^2.88.2",
+    "xml2js": "^0.4.23",
+    "xmldom": "^0.4.0",
+    "xpath": "0.0.32"
+  }
+}
