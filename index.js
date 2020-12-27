@@ -27,24 +27,31 @@ const start = async ()=>{
   })
 
   app.post('/', (req, res)=>{
-    if (listacep.length < 1){
-    listacep.push(req.body);
     
+    if (listacep.length < 1){
+      
+      listacep.push(req.body);
     }
     else{
       listacep.length = 0;
       listacep.push(req.body)
     }
-    console.log(listacep)
+    console.log(listacep);
     res.redirect('/show')
   })
 
   app.get('/show', (req, res)=>{
     const axios = require('axios');
     const xml2js = require('xml2js');
-    var requisicao = listacep[0].cepinput
-
+    if(listacep.length > 0){
+      var requisicao = listacep[0].cepinput
+    }
+    else{
+      res.redirect('/')
+      throw Error;
+    }
     console.log(requisicao)
+    
     axios.get(`https://viacep.com.br/ws/${requisicao}/xml/`)
     .then((response)=>{
       var xml = response.data;
