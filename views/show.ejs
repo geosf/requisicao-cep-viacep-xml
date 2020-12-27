@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Endereço requisitado</h1>
+    <% data.forEach(function(details){ %>
+  <div class="container"></div>
+  <form action="/" method="GET">
+    <label for="logradouro">Logradouro</label>
+    <input type="text" value="<%= details.rua %>" class="form-control" id="logradouro" name="logradouro">
+    <br>
+    <label for="bairro">Bairro</label>
+    <input type="text" value="<%= details.bairro %>" class="form-control" id="bairro" name="bairro">
+    <br>
+    <label for="localidade">Localidade</label>
+    <input type="text" value="<%= details.localidade %>" class="form-control" id="localidade" name="localidade">
+    <br>
+    <label for="uf">UF</label>
+    <input type="text" value="<%= details.uf %>" class="form-control" id="uf" name="uf">
+</form>
+<% }) %>
+<br>
+<p><a href="/">Realizar outra requisição</a></p>
+<script>
+    
+</script>
+</body>
+</html>
